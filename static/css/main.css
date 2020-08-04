@@ -2001,7 +2001,8 @@ section.partner-block {
     -webkit-justify-content: start;
         -ms-flex-pack: start;
             justify-content: start;
-    position: relative; }
+    position: relative;
+    max-width: 303px; }
     .form-partner__captcha:after {
       content: '';
       background: url("../img/order/order-robot.png");
@@ -2011,8 +2012,8 @@ section.partner-block {
       background-repeat: no-repeat;
       margin-left: 96px;
       position: absolute;
-      right: 85px;
-      bottom: -8px; }
+      right: -133px;
+      bottom: -14px; }
   .form-partner__label {
     font-size: 14px;
     font-weight: 300;
@@ -2034,7 +2035,7 @@ section.partner-block {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.1px;
-    margin-top: 6px; }
+    margin-top: 12px; }
     .form-partner__checkbox p {
       color: #293240;
       font-size: 14px;
@@ -3289,7 +3290,7 @@ time {
     margin-bottom: 8px; }
   .form-partner__captcha:after {
     background-size: 37px;
-    right: 14px;
+    right: -85px;
     bottom: -41px; }
   .form-partner__button {
     padding: 16px 77px;

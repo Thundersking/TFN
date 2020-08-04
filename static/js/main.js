@@ -98,34 +98,26 @@ customer.forEach( function(i) {
 
   $('.topmenu-info.footer-link__btn').on('click',() => {
     $('.submenu-footer').stop().fadeToggle();
-    $(".dropdown-arrow__footer").toggleClass("mob-menu-rotate");
     return false;
   });
 
   $('.topmenu-info.topmenu-link__btn').on('click',() => {
     $('.mob-submenu').stop().fadeToggle();
-    $(".mob-dropdown-arrow").toggleClass("mob-menu-rotate");
     return false;
   });
 
 
-  let menuInfo = document.querySelectorAll('.topmenu-info');
-
-
-//раскрытие сертификатов и материалов
-
-  $(function(){
-    $('#doc-sertificate').click(function(){
-      $('.document-sertificate').toggle();
-    });
+$(function(){
+  $('#doc-sertificate').click(function(){
+     $('.document-sertificate').toggle();
   });
+});
 
-  $(function(){
-    $('#doc-material').click(function(){
-      $('.document-material').toggle();
-    });
+$(function(){
+  $('#doc-material').click(function(){
+     $('.document-material').toggle();
   });
-
+});
 
 
 
