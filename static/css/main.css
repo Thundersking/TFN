@@ -3548,6 +3548,8 @@ time {
       display: none; }
   .header-logo {
     margin-right: 0; }
+  .mob-dropdown-arrow {
+    right: 39px; }
   .mob-menu {
     width: 300px;
     padding: 43px 103px 15px 48px; }
