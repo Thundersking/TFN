@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/css/slick.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+    <title>Каталог
+    </title>
+  </head>
+  <body>
+    <div class="container" id="js-wrapper">
+            <section class="header">
+              <div class="header-menu">
+                <div class="wrapper">
+                  <nav class="header-nav">
+                    <div class="header-nav-logo"><a class="header-logo" href="index.html"> <img src="static/img/svg/tfn-logo-header.svg" alt=""></a>
+                      <div class="header-nav__icon header-nav__icon_l"><a href="profile.html">
+                          <div class="header-nav__user"></div>
+                          <div class="header-nav__icon-user">Вход<br> для партнеров</div></a><a href="customer.html">
+                          <div class="header-nav__customer"></div></a><a href="#">
+                          <div class="header-nav__search"></div></a></div>
+                    </div>
+                    <ul class="topmenu"> 
+                      <li class="topmenu-link"><a class=" active__btn topmenu-link__btn" href="catalog.html">Каталог</a>
+                      </li>
+                      <li class="topmenu-link"><a class="topmenu-info topmenu-link__btn" href="#">Информация</a>
+                        <div class="dropdown-arrow"><img src="static/img/index/arrow-main.png" alt=""></div>
+                        <ul class="submenu"> 
+                          <li class="submenu-link"><a href="info-all-event.html">События</a></li>
+                          <li class="submenu-link"><a href="info.html">Технологии</a></li>
+                          <li class="submenu-link"><a href="order.html">Сертификаты</a></li>
+                        </ul>
+                      </li>
+                      <li class="topmenu-link"><a class="topmenu-link__btn" href="partner.html">Стать партнером</a>
+                      </li>
+                      <li class="topmenu-link"><a class="topmenu-link__btn" href="contact.html">Контакты</a>
+                      </li>
+                      <li class="topmenu-link"><a class="topmenu-link__btn" href="#">EN</a>
+                      </li>
+                    </ul>
+                    <div class="header-nav__block"><a class="header-nav__button" href="#">Дисконт</a>
+                      <div class="header-nav__icon header-nav__icon_b">
+                        <div class="header-nav__user header-nav-icon"><a href="catalog-loggedin.html"></a>
+                          <div class="header-nav__icon-user">Вход<br> для партнеров</div>
+                        </div>
+                        <div class="header-nav__customer header-nav-icon"><a href="customer.html"></a></div>
+                        <div class="header-nav__search header-nav-icon"><a href="#"></a></div>
+                      </div>
+                    </div>
+                    <button class="btn mob-menu-btn js-mob-menu-open" id="js-mob-menu-btn"></button>
+                  </nav>
+                </div>
+              </div>
+              <div class="mob-menu-overlay js-mob-menu-open" id="js-menu-overlay"></div>
+              <div class="mob-menu" id="js-mob-menu"><a class="mob-menu__logo"> <img src="static/img/svg/tfn-logo-header.svg" alt=""></a>
+                <nav class="mob-menu__nav"> 
+                  <ul class="mob-topmenu">
+                    <li class="mob-topmenu-link"><a class=" active-mob__btn topmenu-link__btn" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="mob-topmenu-link"><a class="topmenu-info topmenu-link__btn" href="#">Информация</a>
+                      <div class="mob-dropdown-arrow"><img src="static/img/index/arrow-main.png" alt=""></div>
+                      <ul class="mob-submenu"> 
+                        <li class="mob-submenu-link"><a href="info-all-event.html">События</a></li>
+                        <li class="mob-submenu-link"><a href="info.html">Технологии</a></li>
+                        <li class="mob-submenu-link"><a href="order.html">Сертификаты</a></li>
+                      </ul>
+                    </li>
+                    <li class="mob-topmenu-link"><a class="topmenu-link__btn" href="partner.html">Стать партнером</a>
+                    </li>
+                    <li class="mob-topmenu-link"><a class="topmenu-link__btn" href="contact.html">Контакты</a>
+                    </li>
+                    <li class="mob-topmenu-link"><a class="topmenu-link__btn" href="#">EN</a>
+                    </li>
+                  </ul>
+                  <div class="mob-header-nav__block"><a class="mob-header-nav__button" href="#">Дисконт</a></div>
+                </nav>
+              </div>
+            </section>
+      <section class="breadcrumbs">
+        <div class="wrapper">
+          <div class="breadcrumbs breadcrumbs-catalog" role="navigation">
+            <div class="bread-crumbs__body">
+              <nav class="breadcrumbs__main" itemtype="http://schema.org/BreadcrumbList"><a class="pathway" itemprop="item" href="index.html"> <span itemprop="name">Главная</span><span class="divider"></span></a>
+                <meta itemprop="position" content="1"><a class="pathway" itemprop="item" href="catalog.html"> <span itemprop="name">Каталог</span></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="wrapper">
+          <div class="catalog-body catalog__wrap">
+            <div class="catalog-sidebar catalog__sidebar">
+              <button class="filter-body-mob filter-btn js-filter-open">Фильтр</button>
+              <div class="filter filter-body" id="js-filter">
+                <div class="filter__overlay js-filter-open" id="js-filter-overlay"></div>
+                <div class="filter__main">
+                  <button class="filter__title js-filter-open"></button>
+                  <form class="filter__form" action="#" method="get">
+                    <div class="filter-item"> 
+                      <h4 class="filter-item__header filter-item__type">Тип</h4>
+                      <ul class="filter-attribute">
+                        <li class="filter-attribute_b filter-attribute__item"> 
+                          <input type="checkbox"><span class="filter-checkbox__dop">Медицинские оправы</span>
+                        </li>
+                        <li class="filter-attribute_b filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Солнцезащитные очки</span>
+                        </li>
+                        <li class="filter-attribute_b filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Линзы</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-item"> 
+                      <h4 class="filter-item__header">Бренд</h4>
+                      <ul class="filter-attribute">
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Belstaff</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Carrera</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Celine</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">DITA</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">DKNY</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">GIGI Barcelona</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Givenchy</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">FENDY</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Havaianas</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">HUGO</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Juicy Couture</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Jimmy Choo</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Levi's</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Love Moschino</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Marc Jacobs</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Max Mara</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">M Missoni</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Moschino</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">MYKITA</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Paul Smith</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Pierre Cardin</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Polaroid</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Safilo</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">SMITH</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Tommy Hilfiger</span>
+                        </li>
+                        <li class="filter-attribute__brand filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Victoria Beckham</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-item"> 
+                      <h4 class="filter-item__header">Для кого</h4>
+                      <ul class="filter-attribute">
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Мужчины</span>
+                        </li>
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Женщины</span>
+                        </li>
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Унисекс</span>
+                        </li>
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Унисекс</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-item"> 
+                      <h4 class="filter-item__header">Спецпредложения</h4>
+                      <ul class="filter-attribute">
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Новинки</span>
+                        </li>
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Акция</span>
+                        </li>
+                        <li class="filter-attribute_m filter-attribute__item">
+                          <input type="checkbox"><span class="filter-checkbox__dop">Регулярная коллекция</span>
+                        </li>
+                      </ul><span class="filter-clear">Сбросить всё</span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-main" id="filter-catalog"><a class="catalog-item" href="product.html"><span class="product-item__flag product-item__flag_new"></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_001.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Belstaff</h4>
+                                <p>Slipway</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span class="product-item__flag product-item__flag_sales"></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_002.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>BOSS ORANGE</h4>
+                                <p>BO 0328 086</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span class="product-item__flag product-item__flag_sales"></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_003.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Carrera</h4>
+                                <p>1101/V 8RR</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_004.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>GIGI Barcelona</h4>
+                                <p>Venus</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span class="product-item__flag product-item__flag_sales"></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_005.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Givenchy</h4>
+                                <p>GV 7161/G/S REJ I4</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_006.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Havaianas</h4>
+                                <p>Noronha/M 7RM VQ</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_007.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>DITA</h4>
+                                <p>Lancier-704</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_008.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>HOYA</h4>
+                                <p>Nulux Active 1.50 Super Hi-Vision</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_009.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Levi's</h4>
+                                <p>LV 5002/S 807 IR</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_010.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>HUGO</h4>
+                                <p>HG 1084/S 000 9O</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_011.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>HUGO BOSS</h4>
+                                <p>0852 C19</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_012.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Jimmy Choo</h4>
+                                <p>JC41 130</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_013.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>M Missoni</h4>
+                                <p>MMI 0018/S NCK HA</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_014.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Marc Jacobs</h4>
+                                <p>MARC 167 C8W</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_015.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Max &amp; Co.</h4>
+                                <p>355/S IPR KU</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_016.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Max Mara</h4>
+                                <p>MM 1307 MFX</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_017.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>MYKITA</h4>
+                                <p>ZANE 56</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_018.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Safilo</h4>
+                                <p>7A 069 R80</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_019.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Missoni</h4>
+                                <p>MIS 0001/S EM5 9O</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_020.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Moschino</h4>
+                                <p>MOS071/S V81 T4</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_021.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Moschino Love</h4>
+                                <p>MOL025/S KB7 IR</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_022.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Paul Smith</h4>
+                                <p>Archer V1</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_023.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Pierre Cardin</h4>
+                                <p>P.C. 8485/S 573 9O</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_024.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Polaroid</h4>
+                                <p>PLD 4039/S LK9 Z7</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_025.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Tommy Hilfiger</h4>
+                                <p>TH 1530 C9A</p>
+                              </div><span class="catalog-item__button">В корзину </span></a><a class="catalog-item" href="product.html"><span></span>
+                              <div class="catalog-item__pic"><img src="static/img/catalog/product_026.png" alt=""></div>
+                              <div class="catalog-item__desc">
+                                <h4>Vicrotia Beckham</h4>
+                                <p>VB90S</p>
+                              </div><span class="catalog-item__button">В корзину </span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+            <footer class="footer">
+              <div class="footer-main">
+                <div class="wrapper">
+                  <div class="footer-body"><a class="footer-col" href="index.html"><img src="static/img/svg/tfn-logo-footer.svg" alt=""></a>
+                    <div class="footer-col">
+                      <div class="custom">
+                        <div class="footer__address">47-й км МКАД, г.&nbsp;Москва, Россия</div>
+                        <div class="footer__phone"> <a href="tel:+74956497175">+7 495 649-71-75</a></div>
+                        <div class="footer__mail">Эл. почта: <a href="mailto:info@tfnopt.ru">info@tfnopt.ru</a></div><a class="footer__button" href="#">Стать партнером</a>
+                      </div>
+                    </div>
+                    <div class="footer-col">
+                      <div class="footer-nav">
+                        <ul class="footer-nav__item">
+                          <li class="footer-nav__link"><a class=" active-footer__btn footer-link__btn" href="catalog.html">Каталог</a>
+                          </li>
+                          <li class="footer-nav__link"><a class="topmenu-info footer-link__btn" href="#">Информация</a>
+                            <div class="dropdown-arrow dropdown-arrow__footer"><img src="static/img/index/arrow-main.png" alt=""></div>
+                            <ul class="submenu-footer">
+                              <li class="submenu-link-footer mob-submenu-link"><a href="info-all-event.html">События</a></li>
+                              <li class="submenu-link-footer mob-submenu-link"><a href="info.html">Технология</a></li>
+                              <li class="submenu-link-footer mob-submenu-link"><a href="order.html">Сертификаты</a></li>
+                            </ul>
+                          </li>
+                          <li class="footer-nav__link"><a class="footer-link__btn" href="partner.html">Стать партнером</a>
+                          </li>
+                          <li class="footer-nav__link"><a class="footer-link__btn" href="contact.html">Контакты</a>
+                          </li>
+                          <li class="footer-nav__link"><a class="footer-link__btn" href="#">EN</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="footer__col">
+                      <form class="footer-search" action="/search" method="get" role="search">
+                        <input class="footer-search__input" type="text" value="Найти" title="Найти" onblur="this.value=(this.value=='')?this.title:this.value;" onfocus="this.value=(this.value==this.title)?'':this.value;">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <div class="wrapper">
+                  <div class="footer-copyright">© 2020  Группа компаний TFN. All Rights Reserved </div>
+                </div>
+              </div>
+            </footer>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
