@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="static/css/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Главная страница
     </title>
   </head>
@@ -30,7 +29,7 @@
                         <div class="dropdown-arrow"><img src="static/img/index/arrow-main.png" alt=""></div>
                         <ul class="submenu"> 
                           <li class="submenu-link"><a href="info-all-event.html">События</a></li>
-                          <li class="submenu-link"><a href="info.html">Технология</a></li>
+                          <li class="submenu-link"><a href="info.html">Технологии</a></li>
                           <li class="submenu-link"><a href="order.html">Сертификаты</a></li>
                         </ul>
                       </li>
@@ -42,11 +41,13 @@
                       </li>
                     </ul>
                     <div class="header-nav__block"><a class="header-nav__button" href="#">Дисконт</a>
-                      <div class="header-nav__icon header-nav__icon_b"><a href="catalog-loggedin.html">
-                          <div class="header-nav__user-active"></div>
-                          <div class="header-nav__icon-user">Вход<br> для партнеров</div></a><a href="customer.html">
-                          <div class="header-nav__customer"></div></a><a href="#">
-                          <div class="header-nav__search"></div></a></div>
+                      <div class="header-nav__icon header-nav__icon_b">
+                        <div class="header-nav__user-active header-nav-icon"><a href="catalog-loggedin.html"></a>
+                          <div class="header-nav__icon-user">Вход<br> для партнеров</div>
+                        </div>
+                        <div class="header-nav__customer header-nav-icon"><a href="customer.html"></a></div>
+                        <div class="header-nav__search header-nav-icon"><a href="#"></a></div>
+                      </div>
                     </div>
                     <button class="btn mob-menu-btn js-mob-menu-open" id="js-mob-menu-btn"></button>
                   </nav>
@@ -62,7 +63,7 @@
                       <div class="mob-dropdown-arrow"><img src="static/img/index/arrow-main.png" alt=""></div>
                       <ul class="mob-submenu"> 
                         <li class="mob-submenu-link"><a href="info-all-event.html">События</a></li>
-                        <li class="mob-submenu-link"><a href="info.html">Технология</a></li>
+                        <li class="mob-submenu-link"><a href="info.html">Технологии</a></li>
                         <li class="mob-submenu-link"><a href="order.html">Сертификаты</a></li>
                       </ul>
                     </li>
@@ -183,7 +184,7 @@
                     </div>
                     <div class="footer__col">
                       <form class="footer-search" action="/search" method="get" role="search">
-                        <input class="footer-search__input" type="text" name="q" placeholder="Найти">
+                        <input class="footer-search__input" type="text" value="Найти" title="Найти" onblur="this.value=(this.value=='')?this.title:this.value;" onfocus="this.value=(this.value==this.title)?'':this.value;">
                       </form>
                     </div>
                   </div>
